@@ -28,3 +28,6 @@ func _physics_process(delta):
 func _on_Camera2D_zoo(zom, target):
 	zoomed=zom
 	targett=target
+
+
+

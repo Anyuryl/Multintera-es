@@ -38,3 +38,15 @@ func _on_vr_timeout():
 	Global.trocar('res://tscnss/vr.tscn')
 	for i in get_tree().get_nodes_in_group("cam"):
 		i.emit_signal("zoo",false,center)
+
+
+func _on_interatividade_pressed():
+	for i in get_tree().get_nodes_in_group("cam"):
+		i.emit_signal("zoo",true,$Control/interatividade.rect_global_position)
+	$int.start()
+
+
+func _on_int_timeout():
+	Global.trocar('res://tscnss/intera.tscn')
+	for i in get_tree().get_nodes_in_group("cam"):
+		i.emit_signal("zoo",false,center)

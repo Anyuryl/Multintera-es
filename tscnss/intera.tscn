@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://tscnss/UI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://fotos/intera.png" type="Texture" id=2]
+[ext_resource path="res://tscnss/TextureButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/intera.gd" type="Script" id=4]
+
+[node name="intera" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intera" type="Sprite" parent="Control"]
+position = Vector2( 500, 365.154 )
+scale = Vector2( 1.019, 1 )
+texture = ExtResource( 2 )
+
+[node name="TextureButton" parent="Control" instance=ExtResource( 3 )]
+margin_left = 92.0
+margin_top = 463.0
+margin_right = 220.0
+margin_bottom = 591.0
+
+[node name="UI" parent="." instance=ExtResource( 1 )]
+
+[connection signal="pressed" from="Control/TextureButton" to="." method="_on_TextureButton_pressed"]

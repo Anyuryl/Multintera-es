@@ -53,10 +53,15 @@ __meta__ = {
 }
 
 [node name="interatividade" type="TextureButton" parent="Control"]
-margin_left = 768.0
-margin_top = 276.0
-margin_right = 916.0
-margin_bottom = 438.0
+self_modulate = Color( 0, 0, 0, 0 )
+anchor_right = 5.456
+anchor_bottom = 2.225
+margin_left = 801.0
+margin_top = 293.0
+margin_right = 1495.76
+margin_bottom = 1104.0
+rect_scale = Vector2( 0.161, 0.147 )
+texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -67,7 +72,12 @@ wait_time = 0.5
 [node name="vr" type="Timer" parent="."]
 wait_time = 0.5
 
+[node name="int" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="pressed" from="Control/multi" to="." method="_on_multi_pressed"]
 [connection signal="pressed" from="Control/vr" to="." method="_on_vr_pressed"]
+[connection signal="pressed" from="Control/interatividade" to="." method="_on_interatividade_pressed"]
 [connection signal="timeout" from="multi" to="." method="_on_multi_timeout"]
 [connection signal="timeout" from="vr" to="." method="_on_vr_timeout"]
+[connection signal="timeout" from="int" to="." method="_on_int_timeout"]
