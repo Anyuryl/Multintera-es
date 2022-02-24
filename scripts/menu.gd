@@ -47,6 +47,7 @@ func _on_interatividade_pressed():
 
 
 func _on_int_timeout():
-	Global.trocar('res://tscnss/intera.tscn')
+	Global.trocar('res://tscnss/web.tscn')
+	#Global.trocar('res://tscnss/intera.tscn')
 	for i in get_tree().get_nodes_in_group("cam"):
 		i.emit_signal("zoo",false,center)
