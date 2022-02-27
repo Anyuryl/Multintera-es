@@ -8,7 +8,9 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	for i in get_tree().get_nodes_in_group("PAG"):
+		i.emit_signal("set_pag",25618)
+	$web.visible=false
 func trocar(nova):
 	get_tree().change_scene(nova)
 

@@ -12,6 +12,7 @@ config_version=4
 
 config/name="SIte"
 run/main_scene="res://tscnss/menu.tscn"
+boot_splash/image="res://loading.png"
 config/icon="res://icon.png"
 
 [autoload]

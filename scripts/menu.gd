@@ -47,7 +47,48 @@ func _on_interatividade_pressed():
 
 
 func _on_int_timeout():
-	Global.trocar('res://tscnss/web.tscn')
-	#Global.trocar('res://tscnss/intera.tscn')
+	Global.trocar('res://tscnss/intera.tscn')
 	for i in get_tree().get_nodes_in_group("cam"):
 		i.emit_signal("zoo",false,center)
+
+
+
+func _on_multi_mouse_entered():
+	$Label.text ='Multimédia'
+
+
+func _on_multi_mouse_exited():
+	$Label.text =''
+
+
+func _on_vr_mouse_entered():
+	$Label.text ='Realidade Virtual'
+
+
+func _on_vr_mouse_exited():
+	$Label.text =''
+
+
+func _on_interatividade_mouse_entered():
+	$Label.text ='Interatividade'
+
+
+func _on_interatividade_mouse_exited():
+	$Label.text =''
+
+
+func _on_arru_timeout():
+	for i in get_tree().get_nodes_in_group("PAG"):
+		i.emit_signal("set_pag",31424)
+		i.visible = true
+		i.visi =true
+		$arru2.start()
+
+
+
+
+func _on_arru2_timeout():
+	for i in get_tree().get_nodes_in_group("PAG"):
+		i.emit_signal("set_pag",31424)
+		i.visible = false
+		i.visi =false
