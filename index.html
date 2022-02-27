@@ -13,7 +13,7 @@
 			border: 0 none;
 			padding: 0;
 			text-align: center;
-			background-color: black;
+			background-color:#ff8142 ;
 		}
 
 		#canvas {
@@ -256,10 +256,10 @@
 			} else {
 				setStatusMode('indeterminate');
 				engine.setCanvas(canvas);
-				engine.startGame(EXECUTABLE_NAME, MAIN_PACK).then(() => {
-					setStatusMode('hidden');
-					initializing = false;
-				}, displayFailureNotice);
+				//engine.startGame(EXECUTABLE_NAME, MAIN_PACK).then(() => {
+				//	setStatusMode('hidden');
+				//	initializing = false;
+				//}, displayFailureNotice);
 			}
 		})();
 	//]]></script>
