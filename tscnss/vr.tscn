@@ -1,19 +1,24 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://fotos/mesa.png" type="Texture" id=1]
 [ext_resource path="res://fotos/vrr.png" type="Texture" id=2]
 [ext_resource path="res://scripts/vr.gd" type="Script" id=3]
+[ext_resource path="res://leaves_and_ground.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://fotos/fundo.png" type="Texture" id=5]
 [ext_resource path="res://fotos/placa.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+font_data = ExtResource( 4 )
 
 [node name="vr" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="Control" type="Control" parent="."]
-margin_left = 95.0
-margin_top = 108.0
-margin_right = 135.0
-margin_bottom = 148.0
+margin_left = 290.0
+margin_top = 128.0
+margin_right = 330.0
+margin_bottom = 168.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -31,7 +36,8 @@ __meta__ = {
 }
 
 [node name="Fundo" type="Sprite" parent="Control"]
-position = Vector2( 405, 292 )
+position = Vector2( 437.5, 293.5 )
+scale = Vector2( 1.687, 1.37125 )
 texture = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="Control"]
@@ -84,9 +90,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label" type="Label" parent="Control"]
+margin_left = -16.0
+margin_top = 9.0
+margin_right = 819.0
+margin_bottom = 212.0
+custom_fonts/font = SubResource( 1 )
+text = "dzxvcbvbnv"
+align = 1
+
 [connection signal="pressed" from="Control/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="mouse_entered" from="Control/Sprite/vr" to="." method="_on_vr_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Sprite/vr" to="." method="_on_vr_mouse_exited"]
 [connection signal="pressed" from="Control/Sprite/vr" to="." method="_on_vr_pressed"]
 [connection signal="timeout" from="Control/Sprite/v" to="." method="_on_v_timeout"]
+[connection signal="mouse_entered" from="Control/Sprite2/pc" to="." method="_on_pc_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Sprite2/pc" to="." method="_on_pc_mouse_exited"]
 [connection signal="pressed" from="Control/Sprite2/pc" to="." method="_on_pc_pressed"]
 [connection signal="timeout" from="Control/Sprite2/p" to="." method="_on_p_timeout"]
 [connection signal="pressed" from="Control/TextureButton" to="." method="_on_TextureButton_pressed"]

@@ -57,3 +57,19 @@ func _on_v_timeout():
 		i.visi =true
 	for i in get_tree().get_nodes_in_group("cam"):
 		i.emit_signal("zoo",false,center)
+
+
+func _on_vr_mouse_entered():
+	$Control/Label.text='"Realidades"'
+
+
+func _on_vr_mouse_exited():
+	$Control/Label.text=''
+
+
+
+func _on_pc_mouse_entered():
+	$Control/Label.text='História'
+
+func _on_pc_mouse_exited():
+	$Control/Label.text=''

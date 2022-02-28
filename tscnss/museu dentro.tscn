@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://fotos/museudentro3.png" type="Texture" id=1]
 [ext_resource path="res://scripts/museu dentro.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://fotos/museudentro1.png" type="Texture" id=6]
 [ext_resource path="res://fotos/next.png" type="Texture" id=7]
 [ext_resource path="res://fotos/WhatsApp Image 2022-02-19 at 15.09.49.jpeg" type="Texture" id=8]
+[ext_resource path="res://fotos/imersivo.png" type="Texture" id=9]
 
 [node name="museu dentro" type="Node2D"]
 script = ExtResource( 2 )
@@ -22,6 +23,17 @@ __meta__ = {
 }
 
 [node name="Node2D" type="Node2D" parent="Control"]
+position = Vector2( 180, 0 )
+
+[node name="Imersivo" type="Sprite" parent="Control/Node2D"]
+position = Vector2( -81, 224 )
+scale = Vector2( 0.341875, 1.494 )
+texture = ExtResource( 9 )
+
+[node name="Imersivo2" type="Sprite" parent="Control/Node2D"]
+position = Vector2( 3284, 223 )
+scale = Vector2( 0.452187, 1.494 )
+texture = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="Control/Node2D"]
 position = Vector2( 400, 250 )
@@ -29,11 +41,11 @@ texture = ExtResource( 6 )
 
 [node name="MUL" type="TextureButton" parent="Control/Node2D/Sprite"]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = -154.0
-margin_top = -142.0
-margin_right = 1121.0
-margin_bottom = 1219.0
-rect_scale = Vector2( 0.213, 0.152 )
+margin_left = -191.0
+margin_top = -165.0
+margin_right = 1084.0
+margin_bottom = 1196.0
+rect_scale = Vector2( 0.256, 0.191 )
 texture_normal = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -101,11 +113,11 @@ one_shot = true
 
 [node name="TextureButton2" type="TextureButton" parent="Control"]
 modulate = Color( 0.223529, 0.223529, 0.223529, 1 )
-self_modulate = Color( 1, 1, 1, 0.266667 )
-margin_left = 735.0
-margin_top = 163.0
-margin_right = 799.0
-margin_bottom = 227.0
+self_modulate = Color( 0.756863, 0.152941, 0.152941, 0.443137 )
+margin_left = 1013.0
+margin_top = 212.0
+margin_right = 1077.0
+margin_bottom = 276.0
 texture_normal = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -113,11 +125,11 @@ __meta__ = {
 
 [node name="TextureButton3" type="TextureButton" parent="Control"]
 modulate = Color( 0.223529, 0.223529, 0.223529, 1 )
-self_modulate = Color( 1, 1, 1, 0.266667 )
-margin_left = 62.0
-margin_top = 163.0
-margin_right = 126.0
-margin_bottom = 227.0
+self_modulate = Color( 1, 1, 1, 0.443137 )
+margin_left = 181.0
+margin_top = 212.0
+margin_right = 245.0
+margin_bottom = 276.0
 rect_scale = Vector2( -1, 1 )
 texture_normal = ExtResource( 7 )
 __meta__ = {
@@ -125,10 +137,10 @@ __meta__ = {
 }
 
 [node name="TextureButton" parent="Control" instance=ExtResource( 4 )]
-margin_left = 0.0
-margin_top = 366.0
-margin_right = 128.0
-margin_bottom = 494.0
+margin_left = 181.0
+margin_top = 349.0
+margin_right = 309.0
+margin_bottom = 477.0
 
 [connection signal="pressed" from="Control/Node2D/Sprite/MUL" to="." method="_on_MUL_pressed"]
 [connection signal="timeout" from="Control/Node2D/Sprite/MU" to="." method="_on_MU_timeout"]

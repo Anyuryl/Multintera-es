@@ -10,33 +10,32 @@ size = 64
 font_data = ExtResource( 4 )
 
 [node name="menu" type="Node2D"]
+position = Vector2( -304, -112 )
 script = ExtResource( 3 )
 
 [node name="Control" type="Control" parent="."]
-margin_left = -105.0
-margin_top = 84.0
-margin_right = -65.0
-margin_bottom = 124.0
+margin_left = 488.0
+margin_top = -28.0
+margin_right = 529.0
+margin_bottom = 6.0
+rect_scale = Vector2( 1.2, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Sprite" type="Sprite" parent="Control"]
-position = Vector2( 605, 253.988 )
+position = Vector2( 440.833, 513 )
 scale = Vector2( 1.1, 1 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="multi" type="TextureButton" parent="Control"]
 self_modulate = Color( 0, 0, 0, 0 )
 anchor_right = 5.456
 anchor_bottom = 2.225
-margin_left = 266.0
-margin_top = 285.0
-margin_right = 1060.76
-margin_bottom = 1096.0
+margin_left = 104.0
+margin_top = 541.0
+margin_right = -5395.89
+margin_bottom = -334.55
 rect_scale = Vector2( 0.149, 0.171 )
 texture_normal = ExtResource( 2 )
 __meta__ = {
@@ -47,10 +46,10 @@ __meta__ = {
 self_modulate = Color( 0, 0, 0, 0 )
 anchor_right = 5.456
 anchor_bottom = 2.225
-margin_left = 528.0
-margin_top = 272.0
-margin_right = 1302.76
-margin_bottom = 1083.0
+margin_left = 364.0
+margin_top = 531.0
+margin_right = -5070.89
+margin_bottom = -258.55
 rect_scale = Vector2( 0.161, 0.147 )
 texture_normal = ExtResource( 2 )
 __meta__ = {
@@ -61,10 +60,10 @@ __meta__ = {
 self_modulate = Color( 0, 0, 0, 0 )
 anchor_right = 5.456
 anchor_bottom = 2.225
-margin_left = 801.0
-margin_top = 293.0
-margin_right = 1495.76
-margin_bottom = 1104.0
+margin_left = 637.0
+margin_top = 552.0
+margin_right = -4847.89
+margin_bottom = -323.55
 rect_scale = Vector2( 0.161, 0.147 )
 texture_normal = ExtResource( 2 )
 __meta__ = {
@@ -79,12 +78,13 @@ wait_time = 0.5
 
 [node name="int" type="Timer" parent="."]
 wait_time = 0.5
+one_shot = true
 
 [node name="Label" type="Label" parent="."]
-margin_left = 187.0
-margin_top = 171.0
-margin_right = 799.0
-margin_bottom = 277.0
+margin_left = 725.0
+margin_top = 362.0
+margin_right = 1337.0
+margin_bottom = 468.0
 custom_fonts/font = SubResource( 1 )
 align = 1
 __meta__ = {
