@@ -10,7 +10,8 @@ signal set_pag(i)
 func _ready():
 	pass # Replace with function body.
 var visi = false
-
+func _physics_process(delta):
+	$Control/TileMap.position.y=-$Control/VScrollBar.value
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -23,4 +24,5 @@ func _on_TextureButton_pressed():
 
 
 func _on_web_set_pag(i):
-	$Control/ScrollContainer.scroll_vertical = i
+	print(i)
+	$Control/VScrollBar.value = i

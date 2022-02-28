@@ -48,7 +48,7 @@ func _on_interatividade_pressed():
 
 func _on_int_timeout():
 	for i in get_tree().get_nodes_in_group("PAG"):
-		i.emit_signal("set_pag",31424)
+		i.emit_signal("set_pag",35023)
 		i.visible = true
 		i.visi =true
 	for i in get_tree().get_nodes_in_group("cam"):
@@ -80,20 +80,4 @@ func _on_interatividade_mouse_exited():
 	$Label.text =''
 
 
-func _on_arru_timeout():
-	if Global.u==0:
-		for i in get_tree().get_nodes_in_group("PAG"):
-			i.emit_signal("set_pag",31424)
-			i.visible = true
-			i.visi =true
-			Global.u=1
-			$arru2.start()
 
-
-
-
-func _on_arru2_timeout():
-	for i in get_tree().get_nodes_in_group("PAG"):
-		i.emit_signal("set_pag",31424)
-		i.visible = false
-		i.visi =false

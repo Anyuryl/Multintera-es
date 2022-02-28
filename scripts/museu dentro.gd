@@ -42,7 +42,7 @@ func _on_MUL_pressed():
 
 func _on_MU_timeout():
 	for i in get_tree().get_nodes_in_group("PAG"):
-		i.emit_signal("set_pag",0)
+		i.emit_signal("set_pag",-116)
 		i.visible = true
 		i.visi =true
 	for i in get_tree().get_nodes_in_group("cam"):
@@ -78,7 +78,7 @@ func _on_hardwa_pressed():
 
 func _on_MU4_timeout():
 	for i in get_tree().get_nodes_in_group("PAG"):
-		i.emit_signal("set_pag",8151)
+		i.emit_signal("set_pag",8451)
 		i.visible = true
 		i.visi =true
 	for i in get_tree().get_nodes_in_group("cam"):
@@ -88,7 +88,7 @@ func _on_MU4_timeout():
 
 func _on_MU2_timeout():
 	for i in get_tree().get_nodes_in_group("PAG"):
-		i.emit_signal("set_pag",4668)
+		i.emit_signal("set_pag",5068)
 		i.visible = true
 		i.visi =true
 	for i in get_tree().get_nodes_in_group("cam"):
@@ -98,7 +98,7 @@ func _on_MU2_timeout():
 
 func _on_MU3_timeout():
 	for i in get_tree().get_nodes_in_group("PAG"):
-		i.emit_signal("set_pag",6984)
+		i.emit_signal("set_pag",7584)
 		i.visible = true
 		i.visi =true
 	for i in get_tree().get_nodes_in_group("cam"):

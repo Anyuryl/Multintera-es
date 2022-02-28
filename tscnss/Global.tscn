@@ -40,8 +40,7 @@ scale = Vector2( 1.103, 2.2925 )
 texture = ExtResource( 4 )
 
 [node name="web" parent="." instance=ExtResource( 5 )]
-position = Vector2( 150, 1 )
-scale = Vector2( 1.1, 1 )
+position = Vector2( 0, 1 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 3 )]
 position = Vector2( 700, 400 )

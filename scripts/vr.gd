@@ -27,7 +27,7 @@ func _on_TextureButton2_pressed():
 
 func _on_p_timeout():
 	for i in get_tree().get_nodes_in_group("PAG"):
-		i.emit_signal("set_pag",26852)
+		i.emit_signal("set_pag",29851)
 		i.visible = true
 		i.visi =true
 	for i in get_tree().get_nodes_in_group("cam"):
@@ -52,7 +52,7 @@ func _on_vr_pressed():
 
 func _on_v_timeout():
 	for i in get_tree().get_nodes_in_group("PAG"):
-		i.emit_signal("set_pag",25618)
+		i.emit_signal("set_pag",28417)
 		i.visible = true
 		i.visi =true
 	for i in get_tree().get_nodes_in_group("cam"):

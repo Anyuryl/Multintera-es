@@ -23,16 +23,12 @@ __meta__ = {
 }
 
 [node name="Node2D" type="Node2D" parent="Control"]
-position = Vector2( 180, 0 )
+position = Vector2( 100, 0 )
 
-[node name="Imersivo" type="Sprite" parent="Control/Node2D"]
-position = Vector2( -81, 224 )
-scale = Vector2( 0.341875, 1.494 )
-texture = ExtResource( 9 )
-
-[node name="Imersivo2" type="Sprite" parent="Control/Node2D"]
-position = Vector2( 3284, 223 )
-scale = Vector2( 0.452187, 1.494 )
+[node name="Imersivo3" type="Sprite" parent="Control/Node2D"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 1669, 218.5 )
+scale = Vector2( 4.83, 2.226 )
 texture = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="Control/Node2D"]
@@ -137,10 +133,10 @@ __meta__ = {
 }
 
 [node name="TextureButton" parent="Control" instance=ExtResource( 4 )]
-margin_left = 181.0
-margin_top = 349.0
-margin_right = 309.0
-margin_bottom = 477.0
+margin_left = 136.0
+margin_top = 352.0
+margin_right = 264.0
+margin_bottom = 480.0
 
 [connection signal="pressed" from="Control/Node2D/Sprite/MUL" to="." method="_on_MUL_pressed"]
 [connection signal="timeout" from="Control/Node2D/Sprite/MU" to="." method="_on_MU_timeout"]
