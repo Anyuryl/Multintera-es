@@ -23,24 +23,25 @@ offset = Vector2( 90, 0 )
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 90, 0 )
 
-[node name="Sprite" parent="UI/CanvasLayer" index="0"]
+[node name="web" parent="UI/CanvasLayer" index="0" instance=ExtResource( 5 )]
+position = Vector2( -96, 15 )
+z_index = 0
+
+[node name="Sprite" parent="UI/CanvasLayer" index="1"]
 position = Vector2( 610, 400 )
 scale = Vector2( 1.2, 1 )
 
-[node name="Fundo2" type="Sprite" parent="UI/CanvasLayer" index="1"]
+[node name="Fundo2" type="Sprite" parent="UI/CanvasLayer" index="2"]
 modulate = Color( 0.745098, 0.188235, 0.188235, 1 )
 position = Vector2( 1655, 512 )
 scale = Vector2( 1.103, 2.2925 )
 texture = ExtResource( 4 )
 
-[node name="Fundo3" type="Sprite" parent="UI/CanvasLayer" index="2"]
+[node name="Fundo3" type="Sprite" parent="UI/CanvasLayer" index="3"]
 modulate = Color( 0.403922, 0.196078, 0.196078, 1 )
 position = Vector2( -434, 476 )
 scale = Vector2( 1.103, 2.2925 )
 texture = ExtResource( 4 )
-
-[node name="web" parent="." instance=ExtResource( 5 )]
-position = Vector2( 0, 1 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 3 )]
 position = Vector2( 700, 400 )

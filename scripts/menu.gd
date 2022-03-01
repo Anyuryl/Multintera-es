@@ -81,3 +81,21 @@ func _on_interatividade_mouse_exited():
 
 
 
+
+
+func _on_in_pressed():
+	for i in get_tree().get_nodes_in_group("PAG"):
+		i.emit_signal("set_pag",-116)
+		i.visible = true
+		i.visi =true
+	for i in get_tree().get_nodes_in_group("cam"):
+		i.emit_signal("zoo",false,center)
+
+
+
+func _on_in_mouse_entered():
+	$Label.text ='Enciclopédia'
+
+
+func _on_in_mouse_exited():
+	$Label.text =''

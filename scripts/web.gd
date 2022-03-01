@@ -11,11 +11,14 @@ func _ready():
 	pass # Replace with function body.
 var visi = false
 func _physics_process(delta):
-	$Control/TileMap.position.y=-$Control/VScrollBar.value
+	$PanelContainer/TileMap.position.y=-$PanelContainer/VScrollBar.value
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
-#	pass
-
+func _input(event):
+	if Input.is_action_pressed("c"):
+		$PanelContainer/VScrollBar.value+=15
+	elif Input.is_action_pressed("b"):
+		$PanelContainer/VScrollBar.value-=15
 
 func _on_TextureButton_pressed():
 	print(1)
@@ -25,4 +28,4 @@ func _on_TextureButton_pressed():
 
 func _on_web_set_pag(i):
 	print(i)
-	$Control/VScrollBar.value = i
+	$PanelContainer/VScrollBar.value = i

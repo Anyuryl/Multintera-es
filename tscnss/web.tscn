@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://scripts/web.gd" type="Script" id=1]
 [ext_resource path="res://paginas/3.png" type="Texture" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://paginas/27.png" type="Texture" id=31]
 [ext_resource path="res://paginas/31.png" type="Texture" id=32]
 [ext_resource path="res://paginas/25.png" type="Texture" id=33]
+[ext_resource path="res://fotos/cartoon-water-splash-with-drops-fx-animation-frames-sprite-sheet_53562-3527.webp" type="Texture" id=34]
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.839216, 0.333333, 0.333333, 1 )
@@ -520,24 +521,74 @@ corner_radius_bottom_left = 20
 30/shapes = [  ]
 30/z_index = 0
 
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 34 )
+region = Rect2( 0, 0, 156, 156 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 34 )
+region = Rect2( 156, 0, 156, 156 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 34 )
+region = Rect2( 312, 0, 156, 156 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 34 )
+region = Rect2( 468, 0, 156, 156 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 34 )
+region = Rect2( 0, 156, 156, 156 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 34 )
+region = Rect2( 156, 156, 156, 156 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 34 )
+region = Rect2( 312, 156, 156, 156 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 34 )
+region = Rect2( 468, 156, 156, 156 )
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [node name="web" type="Node2D" groups=["PAG"]]
 z_index = 1
+z_as_relative = false
 script = ExtResource( 1 )
 
-[node name="Control" type="Control" parent="."]
-margin_left = 189.0
-margin_top = 22.0
-margin_right = 1224.0
-margin_bottom = 815.0
+[node name="PanelContainer" type="Panel" parent="."]
+margin_left = 206.0
+margin_top = 81.0
+margin_right = 1201.0
+margin_bottom = 821.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VScrollBar" type="VScrollBar" parent="Control"]
-margin_left = 952.0
-margin_top = 110.0
-margin_right = 972.0
-margin_bottom = 578.0
+[node name="VScrollBar" type="VScrollBar" parent="PanelContainer"]
+margin_left = 954.0
+margin_top = 49.0
+margin_right = 964.0
+margin_bottom = 510.0
+mouse_default_cursor_shape = 2
 custom_styles/grabber_highlight = SubResource( 4 )
 custom_styles/grabber = SubResource( 3 )
 custom_styles/scroll = SubResource( 2 )
@@ -550,27 +601,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TileMap" type="TileMap" parent="Control"]
-position = Vector2( 75, 0 )
+[node name="TextureButton" type="TextureButton" parent="PanelContainer"]
+modulate = Color( 0.807843, 0, 0, 1 )
+margin_left = 67.0
+margin_top = 35.0
+margin_right = 137.0
+margin_bottom = 104.0
+rect_scale = Vector2( -1, 1 )
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="PanelContainer"]
+position = Vector2( 67.527, 38 )
 scale = Vector2( 0.52, 0.52 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 1667, 2500 )
 format = 1
 tile_data = PoolIntArray( 0, 0, 0, 65536, 1, 0, 131072, 2, 0, 196608, 3, 0, 262144, 4, 0, 327680, 5, 0, 393216, 6, 0, 458752, 7, 0, 524288, 8, 0, 589824, 9, 0, 655360, 10, 0, 720896, 11, 0, 786432, 12, 0, 851968, 13, 0, 917504, 14, 0, 983040, 15, 0, 1048576, 16, 0, 1114112, 17, 0, 1179648, 18, 0, 1245184, 19, 0, 1310720, 20, 0, 1376256, 21, 0, 1441792, 22, 0, 1507328, 23, 0, 1572864, 24, 0, 1638400, 25, 0, 1703936, 26, 0, 1769472, 27, 0, 1835008, 28, 0, 1900544, 29, 0, 1966080, 30, 0 )
 
-[node name="TextureButton" type="TextureButton" parent="Control"]
-modulate = Color( 0.807843, 0, 0, 1 )
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 92.0
-margin_top = 95.0
-margin_right = -879.0
-margin_bottom = -634.0
-rect_scale = Vector2( -1.017, 0.933 )
-texture_normal = ExtResource( 12 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="AnimatedSprite" type="AnimatedSprite" parent="PanelContainer/TileMap"]
+position = Vector2( 844.66, 8173.08 )
+scale = Vector2( 4.7892, 3.22979 )
+frames = SubResource( 14 )
+frame = 6
+playing = true
 
 [connection signal="set_pag" from="." to="." method="_on_web_set_pag"]
-[connection signal="pressed" from="Control/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="PanelContainer/TextureButton" to="." method="_on_TextureButton_pressed"]

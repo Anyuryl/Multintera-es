@@ -34,7 +34,7 @@ func _on_MUL_pressed():
 	for j in get_tree().get_nodes_in_group("PAG"):
 		if j.visi == false:
 			for i in get_tree().get_nodes_in_group("cam"):
-				i.emit_signal("zoo",true,$Control/Node2D/Sprite/MUL.rect_global_position)
+				i.emit_signal("zoo",true,$Control/Node2D/Sprite/MUL.rect_global_position+Vector2(100,100))
 			$Control/Node2D/Sprite/MU.start()
 
 
@@ -53,7 +53,7 @@ func _on_divul_pressed():
 	for j in get_tree().get_nodes_in_group("PAG"):
 		if j.visi == false:
 			for i in get_tree().get_nodes_in_group("cam"):
-				i.emit_signal("zoo",true,$Control/Node2D/Sprite2/divul.rect_global_position)
+				i.emit_signal("zoo",true,$Control/Node2D/Sprite2/divul.rect_global_position+Vector2(100,100))
 			$Control/Node2D/Sprite2/MU2.start()
 
 
@@ -62,7 +62,7 @@ func _on_tipo_pressed():
 	for j in get_tree().get_nodes_in_group("PAG"):
 		if j.visi == false:
 			for i in get_tree().get_nodes_in_group("cam"):
-				i.emit_signal("zoo",true,$Control/Node2D/Sprite3/tipo.rect_global_position)
+				i.emit_signal("zoo",true,$Control/Node2D/Sprite3/tipo.rect_global_position+Vector2(100,100))
 			$Control/Node2D/Sprite3/MU3.start()
 
 

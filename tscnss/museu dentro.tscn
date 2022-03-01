@@ -42,6 +42,7 @@ margin_top = -165.0
 margin_right = 1084.0
 margin_bottom = 1196.0
 rect_scale = Vector2( 0.256, 0.191 )
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -61,6 +62,7 @@ margin_top = -248.0
 margin_right = 1001.0
 margin_bottom = 1113.0
 rect_scale = Vector2( 0.43, 0.253 )
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -80,6 +82,7 @@ margin_top = -246.0
 margin_right = 995.0
 margin_bottom = 1115.0
 rect_scale = Vector2( 0.436, 0.249 )
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -99,6 +102,7 @@ margin_top = -248.0
 margin_right = 999.0
 margin_bottom = 1113.0
 rect_scale = Vector2( 0.434, 0.254 )
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -114,6 +118,7 @@ margin_left = 1013.0
 margin_top = 212.0
 margin_right = 1077.0
 margin_bottom = 276.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -127,6 +132,7 @@ margin_top = 212.0
 margin_right = 245.0
 margin_bottom = 276.0
 rect_scale = Vector2( -1, 1 )
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -137,6 +143,7 @@ margin_left = 136.0
 margin_top = 352.0
 margin_right = 264.0
 margin_bottom = 480.0
+mouse_default_cursor_shape = 2
 
 [connection signal="pressed" from="Control/Node2D/Sprite/MUL" to="." method="_on_MUL_pressed"]
 [connection signal="timeout" from="Control/Node2D/Sprite/MU" to="." method="_on_MU_timeout"]

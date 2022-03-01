@@ -29,6 +29,7 @@ margin_top = 273.0
 margin_right = 1134.15
 margin_bottom = 773.0
 rect_scale = Vector2( 0.184, 0.361 )
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -39,6 +40,7 @@ margin_left = 304.151
 margin_top = 492.0
 margin_right = 432.151
 margin_bottom = 620.0
+mouse_default_cursor_shape = 2
 
 [connection signal="mouse_entered" from="Control/multi" to="." method="_on_multi_mouse_entered"]
 [connection signal="mouse_exited" from="Control/multi" to="." method="_on_multi_mouse_exited"]
